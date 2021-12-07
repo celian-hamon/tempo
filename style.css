@@ -98,3 +98,26 @@ a.selected {
     transform: scaleX(-1);
     width: 15%;
 }
+/* Sur le bas de la page*/
+footer {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    padding-left: 25%;
+}
+
+
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+footer li{
+    list-style: none;
+}
+
+articles {
+
+    padding-left: 25%;
+} 
