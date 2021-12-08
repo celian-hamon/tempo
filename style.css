@@ -138,6 +138,7 @@ article {
     align-items: center;
     justify-self: center;
     grid-area: socials;
+    filter: invert(1);   /* changer couleur de l'image */
 }
 
 .footer a {
@@ -226,7 +227,6 @@ li {
 
 .card__arc path {
     fill: var(--main-bg-color);
-    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
 }
 
 .card:hover .card__header {
@@ -270,8 +270,9 @@ li {
     margin: 0;
     color: var(--main-accent-color);
     font-family: sans-serif;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
     overflow: hidden;
 }
+
+
+
+
