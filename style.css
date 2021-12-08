@@ -1,5 +1,18 @@
+:root {
+    --curve: 40;
+    --main-bg-color: #1d1d1d;
+    --main-color: #af50ff;
+    --main-accent-color: #ffd500;
+    scroll-behavior: smooth;
+}
+
 body {
+    font-family: "Monstserrat", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
     margin: 0;
+    background-color: #1d1d1d;
+    color: #f1f1f1;
 }
 @keyframes bounce-in-right {
     0% {
@@ -35,7 +48,6 @@ body {
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #111; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
     display: flex;
@@ -60,10 +72,9 @@ a.selected {
 }
 
 /* Style page content */
-.main {
+.home {
     padding: 0 0 0 0;
     margin-left: 25%; /* Same as the width of the sidebar */
-    background-color: #111;
     height: 1080px;
     width: 75%;
 }
@@ -98,26 +109,164 @@ a.selected {
     transform: scaleX(-1);
     width: 15%;
 }
+
 /* Sur le bas de la page*/
-footer {
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 0px 0px; 
+
+article {
     padding-left: 25%;
 }
 
-
-
-footer a{
-    text-decoration: none;
-    color: black;
+.footer {
+    margin-left: 25%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "services contacts socials";
+    text-align: center;
 }
-footer li{
+.services {
+    grid-area: services;
+    align-items: center;
+    justify-self: center;
+}
+.contacts {
+    align-items: center;
+    justify-self: center;
+    grid-area: contacts;
+}
+.socials {
+    align-items: center;
+    justify-self: center;
+    grid-area: socials;
+}
+
+.footer a {
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--main-accent-color);
+}
+h3 {
+    text-align: center;
+    color: var(--main-color);
+}
+.footer li {
     list-style: none;
 }
+ul {
+    padding-inline-start: 0px;
+}
+li {
+    padding-inline-start: 0px;
+}
+.icone {
+    width: 25px;
+    height: 25px;
+}
 
-articles {
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+    margin-left: 25%;
+}
 
-    padding-left: 25%;
-} 
+.card {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+}
+
+.card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: calc(var(--curve) * 1px);
+    background-color: var(--main-bg-color);
+    transform: translateY(100%);
+    transition: 0.2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+    transform: translateY(0);
+}
+
+.card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;
+    background-color: var(--main-bg-color);
+    transform: translateY(-100%);
+    transition: 0.2s ease-in-out;
+}
+
+.card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.card__arc path {
+    fill: var(--main-bg-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+
+.card:hover .card__header {
+    transform: translateY(0);
+}
+
+.card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.card__title {
+    font-size: 1em;
+    margin: 0 0 0.3em;
+    color: var(--main-color);
+}
+
+.card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";
+    font-size: 0.8em;
+    color: var(--main-accent-color);
+}
+
+.card__status {
+    font-size: 0.8em;
+    color: var(--main-accent-color);
+}
+
+.card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: var(--main-accent-color);
+    font-family: "MockFlowFont";
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
