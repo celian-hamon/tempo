@@ -138,8 +138,8 @@ article {
     align-items: center;
     justify-self: center;
     grid-area: socials;
-    filter: invert(1);   /* changer couleur de l'image */
 }
+
 
 .footer a {
     text-decoration: none;
@@ -162,6 +162,7 @@ li {
 .icone {
     width: 25px;
     height: 25px;
+    filter: invert(1);   /* changer couleur de l'image */
 }
 
 /*cards de chaussettes*/
@@ -272,7 +273,3 @@ li {
     font-family: sans-serif;
     overflow: hidden;
 }
-
-
-
-
