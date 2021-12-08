@@ -78,7 +78,12 @@ a.selected {
     height: 1080px;
     width: 75%;
 }
-
+.price {
+    margin-left: 25%;
+    margin-bottom: 500px;
+}
+.about {
+}
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {
@@ -94,12 +99,6 @@ a.selected {
     animation: fadeIn 0.5s;
     animation-iteration-count: 1;
     color: #f1f1f1;
-}
-
-/*cdn download of azonix font*/
-@font-face {
-    font-family: "Azonix";
-    src: url("https://fonts.googleapis.com/css?family=Redacted");
 }
 
 /**/
@@ -164,6 +163,7 @@ li {
     height: 25px;
 }
 
+/*cards de chaussettes*/
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -171,7 +171,6 @@ li {
     margin: 4rem 5vw;
     padding: 0;
     list-style-type: none;
-    margin-left: 25%;
 }
 
 .card {
@@ -260,11 +259,17 @@ li {
     color: var(--main-accent-color);
 }
 
+.card__price {
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: var(--main-color);
+}
+
 .card__description {
     padding: 0 2em 2em;
     margin: 0;
     color: var(--main-accent-color);
-    font-family: "MockFlowFont";
+    font-family: sans-serif;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
