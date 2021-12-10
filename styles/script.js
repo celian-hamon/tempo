@@ -1,57 +1,70 @@
-//add an arrow to the selected item when you click on a link in the sidebar
-addEventListener(
-    "click",
-    function (e) {
-        if (this.document.querySelector(".selected")) {
-            //remove <i class="bi bi-arrow-left"></i> from the html
-            this.document.querySelector(".selected").innerHTML = this.document
-                .querySelector(".selected")
-                .innerHTML.replace(
-                    /<i class="bi bi-arrow-left-short"><\/i>/g,
-                    ""
-                );
-
-            this.document.querySelector(".selected").innerHTML;
-            this.document
-                .querySelector(".selected")
-                .classList.remove("selected");
-        }
-        if (
-            e.target.tagName === "A" && //if the target dont have the class selected
-            !e.target.classList.contains("selected")
-        ) {
-            e.target.classList.add("selected");
-            e.target.innerHTML += '<i class="bi bi-arrow-left-short"></i>';
-        }
-    },
-    false
-);
-
-//select the item in the sidebar when you scroll to it
-addEventListener("scroll", function (e) {
-    let scroll = this.document.documentElement.scrollTop;
-    let items = this.document.querySelectorAll(".sidebar-item");
-    let item;
-    for (let i = 0; i < items.length; i++) {
-        item = items[i];
-        if (
-            item.offsetTop <= scroll &&
-            item.offsetTop + item.offsetHeight > scroll
-        ) {
-            if (this.document.querySelector(".selected")) {
-                this.document.querySelector(".selected").innerHTML =
-                    this.document
-                        .querySelector(".selected")
-                        .innerHTML.replace(
-                            /<i class="bi bi-arrow-left-short"><\/i>/g,
-                            ""
-                        );
-                this.document
-                    .querySelector(".selected")
-                    .classList.remove("selected");
+//if its a smartphone dont execute the script
+if (window.innerWidth > 768) {
+    //if the user click on an item form the sidebar add an arrow next to it
+    addEventListener("click", function (e) {
+        var item = e.target;
+        if (item.classList.contains("selected")) {
+            item.classList.remove("selected");
+        } else if (item.classList.contains("sidebar-item")) {
+            try {
+                document.querySelector(".selected").classList.remove("selected");
+            } catch (e) {
             }
             item.classList.add("selected");
-            item.innerHTML += '<i class="bi bi-arrow-left-short"></i>';
         }
+    });
+}
+
+// Init when page is loaded
+document.addEventListener("DOMContentLoaded", init);
+
+// Init App
+function init() {
+    const txtElement = document.querySelector(".txt-type");
+    const words = JSON.parse(txtElement.getAttribute("data-words"));
+    const wait = txtElement.getAttribute("data-wait");
+    // Init Typewriter
+    new Typewriter(txtElement, words, wait);
+}
+
+//class for the typewriter
+class Typewriter {
+    constructor(txtElement, words, wait = 3000) {
+        this.txtElement = txtElement;
+        this.words = words;
+        this.txt = "";
+        this.wordIndex = 0;
+        this.wait = parseInt(wait, 10);
+        this.type();
+        this.isDeleting = false;
     }
-});
+
+    type() {
+        const current = this.wordIndex % this.words.length;
+        const fullTxt = this.words[current];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+        let typeSpeed = 300;
+
+        if (this.isDeleting) {
+            typeSpeed /= 2;
+        }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            typeSpeed = this.wait;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === "") {
+            this.isDeleting = false;
+            this.wordIndex++;
+            typeSpeed = 500;
+        }
+
+        setTimeout(() => this.type(), typeSpeed);
+    }
+}
