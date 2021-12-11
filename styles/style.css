@@ -56,13 +56,13 @@ h1.typed:after {
 
 /* The sidebar menu */
 .sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: var(--side); /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%; 
+    width: var(--side);
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
     left: 0;
-    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-x: hidden; 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -70,7 +70,7 @@ h1.typed:after {
     padding-top: 0;
 }
 
-/* The navigation menu links */
+/* animation */
 .sidenav a {
     transition: 0.5s;
     text-decoration: none;
@@ -87,7 +87,7 @@ a.selected {
 .home {
     margin-top: 0;
     padding: 0 0 0 0;
-    margin-left: var(--side); /* Same as the width of the sidebar */
+    margin-left: var(--side); 
     width: 75%;
     height: 100%;
     margin-bottom: 75%;
@@ -273,7 +273,7 @@ span.brand__name {
     font-size: 1rem;
     margin: 0 0 0.3em;
     color: var(--main-color);
-    max-width: 25px;
+    text-align: start;
     white-space: normal;
 }
 
@@ -318,7 +318,7 @@ span.brand__name {
     margin-left: 50%;
 }
 
-/*if the width of the screen is smaller than 1080px transform the sidebar to a navbar*/
+/*responsive design */
 @media screen and (max-width: 1080px) {
     div.sidenav {
         margin-top: 0;
