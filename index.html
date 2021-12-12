@@ -1,273 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <title>My creation </title>
-    <link rel="stylesheet" href="styles/style.css"/>
-    <link
+    <head>
+        <meta charset="UTF-8" />
+        <title>My creation</title>
+        <link rel="stylesheet" href="styles/style.css" />
+        <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
-    />
-</head>
+        />
+    </head>
 
-<body>
-<!-- Side navigation -->
-<div class="sidenav">
-    <a href="#home" class="sidebar-item selected">HOME</a>
-    <a href="#price" class="sidebar-item">PRODUCTS</a>
-    <a href="#about" class="sidebar-item">ABOUT US</a>
-</div>
-
-<!-- Home -->
-<div class="home" id="home">
-    <div class="brand">
-        <h1 class="logo">SOCK IT</h1>
-        <div class="container">
-            <h1 class="typed">A brand about
-                <span class="txt-type" data-wait="3000" data-words='["equity", "sweats", "socks"]'></span>
-            </h1>
+    <body>
+        <!-- Side navigation -->
+        <div class="sidenav">
+            <a href="#home" class="sidebar-item selected">HOME</a>
+            <a href="#price" class="sidebar-item">PRODUCTS</a>
+            <a href="#about" class="sidebar-item">ABOUT US</a>
         </div>
-        <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
-        </svg>
-    </div>
 
-</div>
-
-
-<!-- Price -->
-<div class="price" id="price">
-    <h2>PRODUCTS</h2>
-    <ul class="cards">
-        <li>
-            <a href="" class="card">
-                <img
-                        src="/images/premier_pull.jpg"
-                        style="background-color: white"
-                        class="card__image"
-                        alt=""
-                />
-                <div class="card__overlay">
-                    <div class="card__header">
-                        <svg
-                                class="card__arc"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
-                        </svg>
-                        <span class="card__price">70€</span>
-                        <div class="card__header-text">
-                            <h3 class="card__title">
-                                Pull-over
-                            </h3>
-                            <span class="card__status"
-                            ><i class="bi bi-star-fill"></i
-                            ><i class="bi bi-star-fill"></i
-                            ><i class="bi bi-star-fill"></i
-                            ><i class="bi bi-star-half"></i
-                            ><i class="bi bi-star"></i> 4,5</span
-                            >
-                        </div>
-                    </div>
-                    <p class="card__description">
-                        Pull créé par notre équipe avec des matières éco-responsables. Ce pull vous réchauffera pendant l'hiver 
-                        ou pour l'offrir a votre chérie pour pas qu'il ou elle attrape froid.
-                    </p>
+        <!-- Home -->
+        <div class="home" id="home">
+            <div class="brand">
+                <h1 class="logo">SOCK IT</h1>
+                <div class="container">
+                    <h1 class="typed">
+                        A brand about
+                        <span
+                            class="txt-type"
+                            data-wait="3000"
+                            data-words='["equity", "sweats", "socks"]'
+                        ></span>
+                    </h1>
                 </div>
-            </a>
-        </li>
-        <li>
-            <a href="" class="card">
-                <img
-                        src="/images/tee-shirt.jfif"
-                        style="background-color: white"
-                        class="card__image"
-                        alt=""
-                />
-                <div class="card__overlay">
-                    <div class="card__header">
-                        <svg
-                                class="card__arc"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
-                        </svg>
-                        <span class="card__price">50€</span>
-                        <div class="card__header-text">
-                            <h3 class="card__title">
-                                tee-shirt
-                            </h3>
-                            <span class="card__status"
-                            ><i class="bi bi-star-fill"></i
-                            ><i class="bi bi-star-fill"></i
-                            ><i class="bi bi-star-fill"></i
-                            ><i class="bi bi-star-half"></i
-                            ><i class="bi bi-star"></i> 4,5</span
-                            >
-                        </div>
-                    </div>
-                    <p class="card__description">
-                        tee-shirt éco-responsable créé en France par une ONG : les bénéfices engendrés grâce à la vente de ce
-                         tee-shirt sont reversés à cette association.
-                    </p>
-                </div>
-            </a>
-        </li>
-        <li>
-            <a href="" class="card">
-                <img
-                        src="/images/tee-shirt2.jpg"
-                        style="background-color: white"
-                        class="card__image"
-                        alt=""
-                />
-                <div class="card__overlay">
-                    <div class="card__header">
-                        <svg
-                                class="card__arc"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
-                        </svg>
-                        <span class="card__price">45€</span>
-                        <div class="card__header-text">
-                            <h3 class="card__title">
-                                tee-shirt
-                            </h3>
-                            <span class="card__status"
-                            ><i class="bi bi-star-fill"></i
-                            ><i class="bi bi-star-fill"></i
-                            ><i class="bi bi-star-fill"></i
-                            ><i class="bi bi-star-half"></i
-                            ><i class="bi bi-star"></i> 4,5</span
-                            >
-                        </div>
-                    </div>
-                    <p class="card__description">
-                        tee-shirt blanc conçu avec des matière éco-responsable.
-                    </p>
-                </div>
-            </a>
-        </li>
-        <li>
-            <a href="" class="card">
-                <img
-                        src="/images/pantalon.jpg"
-                        style="background-color: white"
-                        class="card__image"
-                        alt=""
-                />
-                <div class="card__overlay">
-                    <div class="card__header">
-                        <svg
-                                class="card__arc"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
-                        </svg>
-                        <span class="card__price">40€</span>
-                        <div class="card__header-text">
-                            <h3 class="card__title">
-                                Pantalon-cargo
-                            </h3>
-                            <span class="card__status"
-                            ><i class="bi bi-star-fill"></i
-                            ><i class="bi bi-star-fill"></i
-                            ><i class="bi bi-star-fill"></i
-                            ><i class="bi bi-star-half"></i
-                            ><i class="bi bi-star"></i> 4,5</span
-                            >
-                        </div>
-                    </div>
-                    <p class="card__description">
-                        Pantalon cargo créé pour qu'il vous tienne chaud. Cela à été rendu possible grâce
-                        à une technique brevettée par notre équipe.
-                    </p>
-                </div>
-            </a>
-        </li>
-    </ul>
-</div>
-
-<!-- About -->
-<div class="about" id="about">
-    <h2>
-        ABOUT US
-    </h2>
-    <article class="article__history">
-        We are a small brand of clothe wich aim to make you feel like you are in the best clothes ever
-        and pay the producer the best price possible
-        <br>
-        <br>
-        our clothes are producted in the most ecological way possible
-        and each clothe is carbon compensated !
-    </article>
-
-    <article class="article__brand">
-        "Best clothes ever"<br>
-        <span class="brand__name">clothe magazine</span>
-        <br>
-        <br>
-        "It is for me the best website ever !" <br>
-        <span class="brand__name">clothe magazine concurrent</span>
-    </article>
-    <div class="footer">
-
-        <div class="services">
-            <h3>SERVICES</h3>
-            <ul class="listes services">
-                <li><a href="#"> produit </a></li>
-                <li><a href="#"> conception </a></li>
-            </ul>
+                <svg
+                    class="arrow-down"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
+                    />
+                </svg>
+            </div>
         </div>
-        <div class="contacts">
-            <h3>CONTACTS</h3>
-            <ul class="listes conctatct">
-                <li><a href="tel://0230558874"> 02-32-55-88-74 </a></li>
+
+        <!-- Price -->
+        <div class="price" id="price">
+            <h2>PRODUCTS</h2>
+            <ul class="cards">
                 <li>
-                    <a href="mailto://lesmichaut@gmail.com">
-                        lesmichaut@gmail.com
+                    <a href="" class="card">
+                        <img
+                            src="./images/premier_pull.jpg"
+                            style="background-color: white"
+                            class="card__image"
+                            alt=""
+                        />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg
+                                    class="card__arc"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                ></svg>
+                                <span class="card__price">70€</span>
+                                <div class="card__header-text">
+                                    <h3 class="card__title">Pull-over</h3>
+                                    <span class="card__status"
+                                        ><i class="bi bi-star-fill"></i
+                                        ><i class="bi bi-star-fill"></i
+                                        ><i class="bi bi-star-fill"></i
+                                        ><i class="bi bi-star-half"></i
+                                        ><i class="bi bi-star"></i> 4,5</span
+                                    >
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                Pull créé par notre équipe avec des matières
+                                éco-responsables. Ce pull vous réchauffera
+                                pendant l'hiver ou pour l'offrir a votre chérie
+                                pour pas qu'il ou elle attrape froid.
+                            </p>
+                        </div>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.google.fr/maps/place/6+Rue+des+Bosquets,+27120+Pacy-sur-Eure/@49.0233823,1.3832536,17z/data=!3m1!4b1!4m5!3m4!1s0x47e14aaffae06a1f:0xae50beb3352b393f!8m2!3d49.0233823!4d1.3854423">
-                        6 rue des bosquets pacy-sur-eure</a
-                    >
-                </li>
-            </ul>
-        </div>
-        <div class="socials">
-            <h3>RÉSEAUX</h3>
-            <ul class="listes">
-                <li>
-                    <a href="https://facebook.com"
-                    ><img
-                            class="icone"
-                            src="images/facebook.png"
-                            alt="icone facebook"
-                    />
-                        facebook
+                    <a href="" class="card">
+                        <img
+                            src="./images/tee-shirt.jfif"
+                            style="background-color: white"
+                            class="card__image"
+                            alt=""
+                        />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg
+                                    class="card__arc"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                ></svg>
+                                <span class="card__price">50€</span>
+                                <div class="card__header-text">
+                                    <h3 class="card__title">tee-shirt</h3>
+                                    <span class="card__status"
+                                        ><i class="bi bi-star-fill"></i
+                                        ><i class="bi bi-star-fill"></i
+                                        ><i class="bi bi-star-fill"></i
+                                        ><i class="bi bi-star-half"></i
+                                        ><i class="bi bi-star"></i> 4,5</span
+                                    >
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                tee-shirt éco-responsable créé en France par une
+                                ONG : les bénéfices engendrés grâce à la vente
+                                de ce tee-shirt sont reversés à cette
+                                association.
+                            </p>
+                        </div>
                     </a>
                 </li>
                 <li>
-                    <a href="https://twitter.com"
-                    ><img
-                            class="icone"
-                            src="images/twitter.png"
-                            alt="icone twitter"
-                    />
-                        twitter</a>
+                    <a href="" class="card">
+                        <img
+                            src="./images/tee-shirt2.jpg"
+                            style="background-color: white"
+                            class="card__image"
+                            alt=""
+                        />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg
+                                    class="card__arc"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                ></svg>
+                                <span class="card__price">45€</span>
+                                <div class="card__header-text">
+                                    <h3 class="card__title">tee-shirt</h3>
+                                    <span class="card__status"
+                                        ><i class="bi bi-star-fill"></i
+                                        ><i class="bi bi-star-fill"></i
+                                        ><i class="bi bi-star-fill"></i
+                                        ><i class="bi bi-star-half"></i
+                                        ><i class="bi bi-star"></i> 4,5</span
+                                    >
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                tee-shirt blanc conçu avec des matière
+                                éco-responsable.
+                            </p>
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <a href="https://instagram.com"
-                    ><img
-                            class="icone"
-                            src="images/youtube.png"
-                            alt="icone youtbe"
-                    />
-                        youtube
+                    <a href="" class="card">
+                        <img
+                            src="./images/pantalon.jpg"
+                            style="background-color: white"
+                            class="card__image"
+                            alt=""
+                        />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg
+                                    class="card__arc"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                ></svg>
+                                <span class="card__price">40€</span>
+                                <div class="card__header-text">
+                                    <h3 class="card__title">Pantalon-cargo</h3>
+                                    <span class="card__status"
+                                        ><i class="bi bi-star-fill"></i
+                                        ><i class="bi bi-star-fill"></i
+                                        ><i class="bi bi-star-fill"></i
+                                        ><i class="bi bi-star-half"></i
+                                        ><i class="bi bi-star"></i> 4,5</span
+                                    >
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                Pantalon cargo créé pour qu'il vous tienne
+                                chaud. Cela à été rendu possible grâce à une
+                                technique brevettée par notre équipe.
+                            </p>
+                        </div>
                     </a>
                 </li>
             </ul>
         </div>
-    </div>
-</div>
-<script src="styles/script.js"></script>
-</body>
+
+        <!-- About -->
+        <div class="about" id="about">
+            <h2>ABOUT US</h2>
+            <article class="article__history">
+                We are a small brand of clothe wich aim to make you feel like
+                you are in the best clothes ever and pay the producer the best
+                price possible
+                <br />
+                <br />
+                our clothes are producted in the most ecological way possible
+                and each clothe is carbon compensated !
+            </article>
+
+            <article class="article__brand">
+                "Best clothes ever"<br />
+                <span class="brand__name">clothe magazine</span>
+                <br />
+                <br />
+                "It is for me the best website ever !" <br />
+                <span class="brand__name">clothe magazine concurrent</span>
+            </article>
+            <div class="footer">
+                <div class="services">
+                    <h3>SERVICES</h3>
+                    <ul class="listes services">
+                        <li><a href="#"> produit </a></li>
+                        <li><a href="#"> conception </a></li>
+                    </ul>
+                </div>
+                <div class="contacts">
+                    <h3>CONTACTS</h3>
+                    <ul class="listes conctatct">
+                        <li><a href="tel://0230558874"> 02-32-55-88-74 </a></li>
+                        <li>
+                            <a href="mailto://lesmichaut@gmail.com">
+                                lesmichaut@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.google.fr/maps/place/6+Rue+des+Bosquets,+27120+Pacy-sur-Eure/@49.0233823,1.3832536,17z/data=!3m1!4b1!4m5!3m4!1s0x47e14aaffae06a1f:0xae50beb3352b393f!8m2!3d49.0233823!4d1.3854423"
+                            >
+                                6 rue des bosquets pacy-sur-eure</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="socials">
+                    <h3>RÉSEAUX</h3>
+                    <ul class="listes">
+                        <li>
+                            <a href="https://facebook.com"
+                                ><i class="bi bi-facebook"></i>
+                                facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com"
+                                ><i class="bi bi-twitter"></i> twitter</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://instagram.com"
+                                ><i class="bi bi-youtube"></i>
+                                youtube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="styles/script.js"></script>
+    </body>
 </html>
